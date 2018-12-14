@@ -72,6 +72,7 @@ export default class ExegesisResponseImpl implements types.ExegesisResponse {
             throw new Error("Trying to set header after response has been ended.");
         }
         this.headers[name.toLowerCase()] = value;
+        return this;
     }
 
     getHeader(name: string) {
